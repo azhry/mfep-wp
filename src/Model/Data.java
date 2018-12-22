@@ -15,12 +15,11 @@ public class Data {
     
     private int nomor;
     private String nama;
-    private ArrayList<Kriteria> kriteria;
     private ArrayList<String> kriteria_pada_data;
+    private double total_bobot_evauasi;
     
     public Data(){
-        this.kriteria = new ArrayList<Kriteria>();
-        this.kriteria_pada_data = new ArrayList<String>();
+      this.kriteria_pada_data = new ArrayList<String>();
     }
      
     public ArrayList<String> getKriteria_pada_data() {
@@ -51,12 +50,12 @@ public class Data {
         this.nama = nama;
     }
 
-    public ArrayList<Kriteria> getKriteria() {
-        return kriteria;
+    public double getTotal_bobot_evauasi() {
+        return total_bobot_evauasi;
     }
 
-    public void setKriteria(ArrayList<Kriteria> kriteria) {
-        this.kriteria = kriteria;
+    public void setTotal_bobot_evauasi(double total_bobot_evauasi) {
+        this.total_bobot_evauasi = total_bobot_evauasi;
     }
       
 }

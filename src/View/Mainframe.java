@@ -66,7 +66,7 @@ public class Mainframe extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tabel_rangking = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
         mulai_perangkingan = new javax.swing.JButton();
 
@@ -263,7 +263,7 @@ public class Mainframe extends javax.swing.JFrame {
         jScrollPane2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tabel_rangking.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -273,7 +273,7 @@ public class Mainframe extends javax.swing.JFrame {
                 "No", "MFEP", "WP"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tabel_rangking);
 
         jPanel3.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
@@ -327,7 +327,11 @@ public class Mainframe extends javax.swing.JFrame {
     private void muat_dataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_muat_dataActionPerformed
         try {
             this.data = this.main.muatData(this.jPanel1);
-            this.setDataCalonPenerimaBantuanKeTabel(this.data);
+            if(this.data.size() > 0){
+               DefaultTableModel tabel = (DefaultTableModel) this.tabel_rangking.getModel();
+               tabel.setRowCount(this.data.size());
+               this.setDataCalonPenerimaBantuanKeTabel(this.data);   
+            }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Mainframe.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -336,13 +340,17 @@ public class Mainframe extends javax.swing.JFrame {
     }//GEN-LAST:event_muat_dataActionPerformed
 
     private void mulai_perangkinganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulai_perangkinganActionPerformed
-        this.main.mulai_SPK(this.data);
+        ArrayList<Data> mfep = this.main.mulai_SPK_MFEP(this.data);
+        if(mfep != null){
+            this.setTabelRangkingMFEP(mfep);
+            this.setTabelRangkingWP(this.main.mulai_SPK_WP(data));
+        }
     }//GEN-LAST:event_mulai_perangkinganActionPerformed
 
     private void setDataCalonPenerimaBantuanKeTabel(ArrayList<Data> cp){
         DefaultTableModel tabel = (DefaultTableModel) this.table_calon_penerima_bantuan.getModel();
         tabel.setRowCount(0);
-        tabel.setColumnCount(cp.get(0).getKriteria().size()+2); //satu lagi untuk nama dan nomor
+        tabel.setColumnCount(cp.get(0).getKriteria_pada_data().size()+2); //satu lagi untuk nama dan nomor
         Object[] obj;
         int index,nomor=1;
         for(Data orang : cp){
@@ -350,13 +358,30 @@ public class Mainframe extends javax.swing.JFrame {
             obj[0] = nomor;
             obj[1] = orang.getNama();
             index = 2;
-            for(int i=0;i<orang.getKriteria().size();i++){
+            for(int i=0;i<orang.getKriteria_pada_data().size();i++){
                obj[index] = orang.getKriteria_pada_data().get(i);
                index++;
             }
             nomor++;
             tabel.addRow(obj);
         }
+    }
+    
+    private void setTabelRangkingMFEP(ArrayList<Data> mfep){
+         DefaultTableModel tabel = (DefaultTableModel) this.tabel_rangking.getModel();
+         int kolom = 1;
+         for(int i=0;i<mfep.size();i++){
+             tabel.setValueAt((i+1), i, 0); //nomor
+             tabel.setValueAt(mfep.get(i).getNama(), i, kolom);
+         }
+    }
+    
+     private void setTabelRangkingWP(ArrayList<Data> wp){
+         DefaultTableModel tabel = (DefaultTableModel) this.tabel_rangking.getModel();
+         int kolom = 2;
+         for(int i=0;i<wp.size();i++){
+             tabel.setValueAt(wp.get(i).getNama(), i, kolom);
+         }
     }
     /**
      * @param args the command line arguments
@@ -415,11 +440,11 @@ public class Mainframe extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JButton muat_data;
     private javax.swing.JButton mulai_perangkingan;
     private javax.swing.JButton pengaturanpreferensi;
     private javax.swing.JPanel tabel_data;
+    private javax.swing.JTable tabel_rangking;
     private javax.swing.JTable table_calon_penerima_bantuan;
     private javax.swing.JPanel tittle_data;
     // End of variables declaration//GEN-END:variables

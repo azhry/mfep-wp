@@ -16,6 +16,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -48,13 +49,23 @@ public class Main {
         frame.setVisible(true);
     }
     
-    public void mulai_SPK(ArrayList<Data> dcp){
+    public ArrayList<Data> mulai_SPK_MFEP(ArrayList<Data> dcp){
+        ArrayList<Data> res = null;
         if(dcp.size()>0){
-            
+          MFEP spk_1 = new MFEP(dcp, this.daftar_kriteria);   
+          res = spk_1.doMFEP();
         }else{
              JOptionPane.showMessageDialog(null,"Data tidak ada","Ooops!",JOptionPane.ERROR_MESSAGE);
         }
-//        Lakukan perhitungan metode MFEP dan WP
+        return res;
+    }
+    
+    public ArrayList<Data> mulai_SPK_WP(ArrayList<Data> dcp){
+        // METODE WP DI SINI // AZHARI // 4kuGanteng
+        ArrayList<Data> res = new ArrayList<Data>();
+        res = dcp;
+        Collections.shuffle(res); //shuffle saja 
+        return dcp;
     }
     
     public ArrayList<Data> muatData(javax.swing.JPanel parent_panel) throws FileNotFoundException, IOException{
@@ -71,7 +82,6 @@ public class Main {
             Data calon_penerima_bantuan;
             while((data = bf.readLine())!=null){
                calon_penerima_bantuan = new Data();
-               calon_penerima_bantuan.setKriteria(this.daftar_kriteria);
                temp = data.split(",");
                calon_penerima_bantuan.setNama(temp[1]);
                for(int i=2;i<temp.length;i++){
@@ -102,9 +112,9 @@ public class Main {
         
         Kriteria kriteria3 = new Kriteria("Jumlah tanggungan",5,"Benefit(+)");
         kriteria3.tambahFaktor(new Nilai_Faktor(">8",5));
-        kriteria3.tambahFaktor(new Nilai_Faktor("6-8",4));
-        kriteria3.tambahFaktor(new Nilai_Faktor("3-5",3));
-        kriteria3.tambahFaktor(new Nilai_Faktor("1-2",2));
+        kriteria3.tambahFaktor(new Nilai_Faktor("6 s/d 8",4));
+        kriteria3.tambahFaktor(new Nilai_Faktor("3 s/d 5",3));
+        kriteria3.tambahFaktor(new Nilai_Faktor("1 s/d 2",2));
         kriteria3.tambahFaktor(new Nilai_Faktor("Sendiri",1));
         daftar_kriteria.add(kriteria3);
         
@@ -122,14 +132,14 @@ public class Main {
         daftar_kriteria.add(kriteria5);
         
         Kriteria kriteria6 = new Kriteria("Jaringan listrik",2,"Cost(-)");
-        kriteria6.tambahFaktor(new Nilai_Faktor("Milik sendiri(subsidi)",5));
-        kriteria6.tambahFaktor(new Nilai_Faktor("Menumpang(subsidi)",4));
-        kriteria6.tambahFaktor(new Nilai_Faktor("Milik sendiri(tanpa subsidi)",3));
-        kriteria6.tambahFaktor(new Nilai_Faktor("Menumpang(sanpa subsidi)",2));
+        kriteria6.tambahFaktor(new Nilai_Faktor("Milik sendiri (subsidi)",5));
+        kriteria6.tambahFaktor(new Nilai_Faktor("Menumpang (subsidi)",4));
+        kriteria6.tambahFaktor(new Nilai_Faktor("Milik sendiri (tanpa subsidi)",3));
+        kriteria6.tambahFaktor(new Nilai_Faktor("Menumpang (tanpa subsidi)",2));
         kriteria6.tambahFaktor(new Nilai_Faktor("Tidak ada",1));
         daftar_kriteria.add(kriteria6);
 
-        Kriteria kriteria7 = new Kriteria("Jenis rumah",2,"Cost(-)");
+        Kriteria kriteria7 = new Kriteria("Jenis rumah",4,"Cost(-)");
         kriteria7.tambahFaktor(new Nilai_Faktor("Permanen",5));
         kriteria7.tambahFaktor(new Nilai_Faktor("Semi permanen",3));
         kriteria7.tambahFaktor(new Nilai_Faktor("Panggung",1));
