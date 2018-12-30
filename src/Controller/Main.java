@@ -32,7 +32,6 @@ public class Main {
     public Main(){
        daftar_kriteria = new ArrayList<Kriteria>();
        this.bentukDefaultPreferensiPengetahuan();
-//       WeightedProduct wp = new WeightedProduct();
     }
     
     public static void main(String[] args) {
