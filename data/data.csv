@@ -1,0 +1,46 @@
+No,Nama,Pekerjaaan,Penghasilan,Jumlah tanggungan,Kondisi rumah,Kepemilikan rumah,Jaringan listrik,Jenis rumah
+1,Hasbullah,Petani,1300001-1500000,3 s/d 5,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+2,Aspian ,Buruh,300000-800000,3 s/d 5,Papan,Milik sendiri,Milik sendiri (subsidi),Panggung
+3,Paizal aziz,Wirausaha,800001-1300000,6 s/d 8,Beton,Milik sendiri,Milik sendiri (tanpa subsidi),Permanen
+4,Amir hamza,Wirausaha,1300001-1500000,3 s/d 5,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+5,Kunan,Petani,1300001-1500000,3 s/d 5,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+6,Samsir alam,Petani,>1500000,6 s/d 8,Beton,Milik sendiri,Milik sendiri (tanpa subsidi),Permanen
+7,Muhammad eban ,Buruh,800001-1300000,6 s/d 8,Bambu,Menumpang,Menumpang (subsidi),Panggung
+8,Yunani,Buruh,800001-1300000,1 s/d 2,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+9,Ahmad sobki,Petani,300000-800000,6 s/d 8,Papan,Menumpang,Menumpang (tanpa subsidi),Panggung
+10,Dede yusri,Wirausaha,>1500000,6 s/d 8,Beton,Milik sendiri,Milik sendiri (tanpa subsidi),Permanen
+11,Muhammad Suhai,Petani,300000-800000,3 s/d 5,Papan,Menumpang,Menumpang (tanpa subsidi),Panggung
+12,Muhammad kumpi,Petani,300000-800000,6 s/d 8,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+13,Hoiri mz,Buruh,800001-1300000,1 s/d 2,Beton,Menumpang,Menumpang (subsidi),Semi permanen
+14,Mat bujangan,Wirausaha,>1500000,3 s/d 5,Beton,Milik sendiri,Milik sendiri (tanpa subsidi),Semi permanen
+15,Husin p,Buruh,800001-1300000,>8,Bambu,Menumpang,Menumpang (tanpa subsidi),Panggung
+16,Mat ripan s,Buruh,300000-800000,6 s/d 8,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+17,Baharudin,Petani,800001-1300000,6 s/d 8,Papan,Menumpang,Menumpang (tanpa subsidi),Panggung 
+18,Asbianto,Petani,800001-1300000,3 s/d 5,Beton,Milik sendiri,Milik sendiri (subsidi),Permanen
+19,Ahmad saihoni,Buruh,800001-1300000,6 s/d 8,Triplek,Mengontrak,Menumpang (tanpa subsidi),Panggung
+20,Amaludin,Petani,800001-1300000,3 s/d 5,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+21,Nawaludin,Petani,300000-800000,3 s/d 5,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+22,Ahmad nelni,Wirausaha,>1500000,6 s/d 8,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+23,Bahroni,Buruh,800001-1300000,6 s/d 8,Bambu,Mengontrak,Menumpang (tanpa subsidi),Panggung
+24,Mat suhai,Petani,300000-800000,Sendiri,Bambu,Menumpang,Menumpang (tanpa subsidi),Panggung
+25,Mad nali,Buruh,800001-1300000,6 s/d 8,Papan,Mengontrak,Menumpang (tanpa subsidi),Panggung
+26,Ahmad rifani,Petani,>1500000,3 s/d 5,Papan,Menumpang,Menumpang (tanpa subsidi),Panggung
+27,Saironi,Buruh,>1500000,3 s/d 5,Beton,Milik sendiri,Milik sendiri (tanpa subsidi),Semi permanen
+28,Muhamad nasri,Petani,300000-800000,3 s/d 5,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+29,Mursalin,Wirausaha,>1500000,3 s/d 5,Beton,Milik sendiri,Milik sendiri (tanpa subsidi),Permanen
+30,Ahmadin,Petani,300000-800000,3 s/d 5,Beton,Milik sendiri,Milik sendiri (tanpa subsidi),Permanen
+31,M jamil mk,Petani,300000-800000,3 s/d 5,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+32,Rusmalina,Buruh,300000-800000,3 s/d 5,Bambu,Menumpang,Menumpang (subsidi),Panggung
+33,Sarmadi am,Wirausaha,800001-1300000,6 s/d 8,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Panggung
+34,Mad sete’i,Buruh,800001-1300000,3 s/d 5,Beton,Milik sendiri,Milik sendiri (tanpa subsidi),Permanen
+35,Surimna,Buruh,300000-800000,1 s/d 2,Triplek,Mengontrak,Menumpang (tanpa subsidi),Panggung
+36,Yudin,Buruh,300000-800000,6 s/d 8,Papan,Menumpang,Menumpang (subsidi),Panggung
+37,Siti noriyam,Buruh,<300000,Sendiri,Bambu,Menumpang,Tidak ada,Panggung
+38,Hoirul,Petani,800001-1300000,3 s/d 5,Papan,Milik sendiri,Milik sendiri (subsidi),Panggung
+39,Raga,Buruh,300000-800000,1 s/d 2,Triplek,Mengontrak,Milik sendiri (tanpa subsidi),Panggung
+40,Raisen,Buruh,300000-800000,3 s/d 5,Papan,Milik sendiri,Milik sendiri (subsidi),Panggung
+41,Amer,Buruh,300000-800000,1 s/d 2,Papan,Milik sendiri,Milik sendiri (tanpa subsidi),Permanen
+42,Azmar Ar,Buruh,>1500000,1 s/d 2,Beton,Menumpang,Menumpang (tanpa subsidi),Semi permanen
+43,Beben ta cesha ,Buruh,300000-800000,1 s/d 2,Papan,Menumpang,Menumpang (tanpa subsidi),Panggung
+44,Ayopin jansens,Buruh,300000-800000,1 s/d 2,Papan,Menumpang,Menumpang (tanpa subsidi),Panggung
+45,Taklano,Buruh,300000-800000,1 s/d 2,Papan,Menumpang,Menumpang (tanpa subsidi),Panggung
